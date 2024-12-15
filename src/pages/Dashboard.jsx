@@ -52,7 +52,9 @@ function Dashboard() {
       }
 
       const data = await response.json();
-      setItems([...items, data.menuItem]);
+      let itemsCopy = items;
+      setItems(itemsCopy.push(data.menuItem))
+      console.log(items)
       setError(""); // Clear any previous errors
     } catch (error) {
       console.error(error);

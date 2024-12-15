@@ -3,7 +3,7 @@ function MenuItem({items}) {
     <div className="max-w-4xl mx-auto mt-10">
       <h2 className="text-2xl font-bold text-gray-700 mb-6">Created Items</h2>
       <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-        {items.length > 0 ? (
+        { items && items.length > 0 ? (
           items.map((item, index) => (
             <div
               key={index}

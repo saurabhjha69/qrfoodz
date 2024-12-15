@@ -30,7 +30,7 @@ export default function CreateMenu({menuName,setMenuName,handleMenuCreate, menuI
           Menu Items:
         </label>
         <div className="space-y-4">
-          {menuItems.map((item) => (
+          { menuItems && menuItems.map((item) => (
             <ItemsCheckboxCard
               key={item._id}
               pushItemToMenu={pushItemToMenu}

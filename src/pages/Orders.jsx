@@ -19,11 +19,11 @@ function Orders() {
 
   return (
     <div className=" p-5 grid grid-cols-4 gap-5  ">
-      {orders.map((obj,index) => (
+      {orders ? orders.map((obj,index) => (
             <OrderCard key={obj._id} order={obj} index={index} />
-          ))}
+          )) : <p>No Orders Yet...</p> }
     </div>
-  );
+  )
 }
 
 export default Orders;
